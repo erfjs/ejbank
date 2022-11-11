@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Personalized Card | Ejbank</title>
+
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+
+</head>
+
+<body>
+  <main class="container">
+    <aside class="options">
+      <div class="options-container">
+        <header class="header">
+          <img src="img/logo_ej.svg" alt="Ejbank" width="100px" height="100px" />
+        </header>
+
+        <h1 class="title">Personalized Card - Ejbank</h1>
+
+        <div class="input-name">
+          <label for="name">Enter your name</label>
+          <input type="text" id="name" data-js="name" />
+        </div>
+
+        <div class="input-colors">
+          <label>Select card color</label>
+          <input type="button" class="color1" data-js="btn-color" />
+          <input type="button" class="color2" data-js="btn-color" />
+          <input type="button" class="color3" data-js="btn-color" />
+          <input type="button" class="color4" data-js="btn-color" />
+          <input type="button" class="color5" data-js="btn-color" />
+        </div>
+
+        <div class="input-model">
+          <label>Select card template</label>
+          <div class="flex">
+            <input type="button" value="Horizontal" data-js="btn-model" />
+            <input type="button" value="Vertical" data-js="btn-model" />
+          </div>
+        </div>
+
+
+        <footer>
+          <ul class="social-media">
+            <li>
+              <a href="https://www.linkedin.com/in/erfan-granmayeh/" target="_blank">
+                <img src="img/linkedin.svg" alt="Linkedin" />
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/erfjs" target="_blank">
+                <img src="img/github.svg" alt="GitHub" />
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/erfan_grr/" target="_blank">
+                <img src="img/instagram.svg" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+
+          <p class="copy">
+            All rights reserved
+            <a href="https://erfjs.com/" target="_blank">Erfjs</a>
+          </p>
+        </footer>
+      </div>
+    </aside>
+
+    <section class="preview">
+      <div class="card" data-js="card">
+        <div class="card-bg" data-js="card-bg"></div>
+        <div class="card-flag">
+          <img src="img/ejbank.svg" alt="Flag" width="120px" height="120px" />
+        </div>
+
+        <div class="card-flex">
+          <div class="card-logo">
+            <img src="img/logo_ej-mini.svg" alt="Ejbank" width="60px" height="60px"" />
+          </div>
+          <p class=" card-name"></p>
+          </div>
+        </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+.preview {
+  background: url(../../img/bg_lines.svg) no-repeat;
+  background-size: cover;
+  @include flexProps();
+}
+
+.card {
+  width: 688px;
+  height: 400px;
+  background: linear-gradient(71.32deg, #8e2de2 0%, #4a00e0 100%);
+  position: relative;
+  transform: rotateX(51deg) rotateZ(43deg);
+  transform-style: preserve-3d;
+  border-radius: 40px;
+  box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    28px 28px 28px 0 rgba(34, 33, 81, 0.25), 0px 32px 64px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  animation: animaCard 1s ease-in-out infinite alternate;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 688px;
+  height: 400px;
+  border-radius: 40px;
+}
+
+.card-bg__animation {
+  animation: animaBg 0.6s ease-in-out forwards;
+}
+
+.card-flag {
+  position: absolute;
+  transform: translate3d(533px, 32px, 0);
+  transition: 0.6s;
+}
+
+.card-flex {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.card-logo {
+  svg {
+    width: 122px;
+    height: 68px;
+
+    path {
+      fill: $color4;
+      stroke: $color4;
+      transition: 0.6s;
+    }
+  }
+}
+
+.card-name {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.06rem;
+  white-space: nowrap;
+  color: $color4;
+  text-transform: uppercase;
+  margin-left: 3.2rem;
+}
+
+.vertical {
+  width: 400px;
+  height: 688px;
+
+  .card-bg {
+    width: 400px;
+    height: 688px;
+  }
+
+  .card-flag {
+    transform: translate3d(40px, 32px, 0);
+  }
+
+  .card-name {
+    order: -1;
+    margin-bottom: 12.8rem;
+    margin-left: 0;
+  }
+
+  .card-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.logo2 {
+  .card-logo {
+    svg {
+      path {
+        fill: transparent;
+        transition: 0.6s;
+      }
+    }
+  }
+}
+
+@keyframes animaBg {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animaCard {
+  to {
+    transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+    box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+  }
+}

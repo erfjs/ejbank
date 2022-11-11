@@ -1,0 +1,10 @@
+$color1: #820ad1;
+$color2: #e7e8ea;
+$color3: #656b77;
+$color4: #fff;
+
+@mixin flexProps() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
